@@ -8,7 +8,7 @@ A modern and opensource alternative to distrowatch
 * Install all frontend dependencies 
 
 ```html
-cd DistroBoard/DistroBoard/clent
+cd DistroBoard/DistroBoard/client
 yarn install
 ```
 
