@@ -1,2 +1,2 @@
 # DistroBoard
-A modern and opensource alternative to distro watch
+A modern and opensource alternative to distrowatch
