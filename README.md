@@ -1,2 +1,2 @@
-# distroboard.github.io
-The FOSS version of DistroWatch
+# DistroBoard
+A modern and opensource alternative to distro watch
