@@ -1,3 +1,4 @@
+// This is the startpoint for the application
 //Import all dependencies
 import express from 'express';
 import bodyParser from 'body-parser';
@@ -23,4 +24,9 @@ app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}.\nVisit http://localhost:${PORT} to view.`);
 });
 
+// routes
 
+//routes for distros 
+// url : localhost:5000/distros/
+import distroRoutes from './routes/distros.js';
+app.use('/distros', distroRoutes);
