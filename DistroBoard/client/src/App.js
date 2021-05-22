@@ -1,8 +1,28 @@
 import React from 'react';
+import {AppBar, Toolbar, Typography, IconButton, Tooltip} from '@material-ui/core';
+
+import GitHubIcon from '@material-ui/icons/GitHub';
+import Brightness6Icon from '@material-ui/icons/Brightness6';
+import InfoIcon from '@material-ui/icons/Info';
+import MenuIcon from '@material-ui/icons/Menu';
 
 const App = () => {
   return (
-    <div><h1>DistroBoard</h1></div>
+
+    <AppBar>
+      <Toolbar>
+
+        <Tooltip title="Menu" aria-label="menu"><IconButton color="inherit"><MenuIcon /></IconButton></Tooltip>
+        <Typography variant="h6" style={{flexGrow: 1}}>DistroBoard</Typography>
+
+        <Tooltip title="Toggle Light/Dark" aria-label="toggle"><IconButton color="inherit" ><Brightness6Icon /></IconButton></Tooltip>
+        <Tooltip title="About" aria-label="about"><IconButton color="inherit"><InfoIcon /></IconButton></Tooltip>
+        <Tooltip title="View Source" aria-label="source"><IconButton color="inherit" href="https://github.com/DistroBoard/DistroBoard"><GitHubIcon /></IconButton></Tooltip>
+
+
+      </Toolbar >
+    </AppBar >
+
   );
 }
 
