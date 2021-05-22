@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {AppBar, Toolbar, Typography, IconButton, Tooltip} from '@material-ui/core';
+import {AppBar, Toolbar, Typography, IconButton, Tooltip, CssBaseline} from '@material-ui/core';
 import {ThemeProvider, createMuiTheme} from '@material-ui/core/styles';
 
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -22,6 +22,7 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline />
       <AppBar style={{backgroundColor: '#212121'}}  >
         <Toolbar>
 
