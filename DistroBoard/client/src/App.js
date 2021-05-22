@@ -1,51 +1,30 @@
-import React, {useState} from 'react';
-import {AppBar, Toolbar, Typography, IconButton, Tooltip, CssBaseline} from '@material-ui/core';
-import {ThemeProvider, createMuiTheme} from '@material-ui/core/styles';
+import React from 'react';
+import {Grow, Grid, Container} from '@material-ui/core';
 
-import GitHubIcon from '@material-ui/icons/GitHub';
-import Brightness6Icon from '@material-ui/icons/Brightness6';
-import InfoIcon from '@material-ui/icons/Info';
-import MenuIcon from '@material-ui/icons/Menu';
-
-
-
+import Header from './components/Header/Header';
+import Distros from './components/Distros/Distros';
+import Form from './components/Form/Form';
 
 const App = () => {
-
-  const [darkMode, setDarkMode] = useState(false);
-  const theme = createMuiTheme({
-    palette: {
-      type: darkMode ? "dark" : "light",
-
-    }
-  });
-
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <AppBar style={{backgroundColor: '#212121'}}  >
-        <Toolbar>
-
-          <Tooltip title="Menu" aria-label="menu"><IconButton color="inherit"><MenuIcon /></IconButton></Tooltip>
-          <Typography variant="h6" style={{flexGrow: 1}}>DistroBoard</Typography>
-
-          <Tooltip title="Toggle Light/Dark" aria-label="toggle"><IconButton color="inherit" onClick={() => {setDarkMode(!darkMode)}} ><Brightness6Icon /></IconButton></Tooltip>
-          <Tooltip title="About" aria-label="about"><IconButton color="inherit"><InfoIcon /></IconButton></Tooltip>
-          <Tooltip title="View Source" aria-label="source"><IconButton color="inherit" href="https://github.com/DistroBoard/DistroBoard"><GitHubIcon /></IconButton></Tooltip>
-
-        </Toolbar >
-      </AppBar >
-
-
-
-
-
-
-
-
-    </ThemeProvider>
-
+    <>
+      <Header />
+      <Container maxWidth="lg">
+        <Grow in>
+          <Container>
+            <Grid container justify="space-between" alignItems="stretch" spacing={3}>
+              <Grid item xs={12} sm={7}>
+                <Distros />
+              </Grid>
+              <Grid item xs={12} sm={4}>
+                <Form />
+              </Grid>
+            </Grid>
+          </Container>
+        </Grow>
+      </Container>
+    </>
   );
-}
+};
 
 export default App;
