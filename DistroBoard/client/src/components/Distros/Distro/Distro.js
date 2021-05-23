@@ -15,22 +15,22 @@ const Distro = () => {
       <Card >
         <CardContent>
           <Typography color="textSecondary" gutterBottom>
-            Distro of the Day
+            Editors Pick
         </Typography>
           <Typography variant="h5" component="h2">
             Arch Linux
         </Typography>
           <Typography  >
-            The best distro in the world
+            This is a DIY distro. You install everything <code>from</code> scratch.<code> It's</code> the experience that you want to <code>try</code>. You learn a lot after installing Arch Linux.
           </Typography>
           <Typography variant="body2" component="p">
-            Use Arch
+            
           <br />
-            {'"Cuz WIndows suX"'}
+            You should try it if you want to learn Linux.
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small">Learn More</Button>
+          <Button size="small"><a href="https://archlinux.org">Learn More</a></Button>
         </CardActions>
       </Card>
 
