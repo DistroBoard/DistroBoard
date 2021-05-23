@@ -1,7 +1,6 @@
 # DistroBoard
 A modern and opensource alternative to distrowatch
 
-<<<<<<< HEAD
 # Notes for developers
 
 ## Instructions to run application in develpment
@@ -32,4 +31,3 @@ yarn dev
 - [BiswasJishnu](https://github.com/BiswasJishnu)
 - [Abdellatif-dev](https://github.com/abdellatif-dev)
 - [Coder684](https://github.com/Coder684)
->>>>>>> main
