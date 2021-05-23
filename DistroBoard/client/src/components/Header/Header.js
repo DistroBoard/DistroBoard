@@ -19,7 +19,7 @@ const Header = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <AppBar style={{backgroundColor: '#212121'}} position="static" >
+      <AppBar style={{backgroundColor: '#212121', marginBottom: 30}} position="static" >
         <Toolbar>
 
           <Tooltip title="Menu" aria-label="menu"><IconButton color="inherit"><MenuIcon /></IconButton></Tooltip>
