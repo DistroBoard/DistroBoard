@@ -26,7 +26,7 @@ yarn install
 cd DistroBoard/server
 yarn dev
 ```
-=======
+
 # Contributors
 - [BiswasJishnu](https://github.com/BiswasJishnu)
 - [Abdellatif-dev](https://github.com/abdellatif-dev)
