@@ -3,7 +3,7 @@ export default (distros = [], action) => {
   switch (action.type) {
 
     case 'FETCH_ALL':
-      return distros;
+      return action.payload;
     case 'CREATE':
       return distros;
 
