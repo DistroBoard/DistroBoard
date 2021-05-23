@@ -47,8 +47,8 @@ const Form = () => {
           />
         </div>
 
-        <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit">Submit</Button>
-        <Button className={classes.buttonClear} variant="contained" color="secondary" size="small" onClick={clear} >Clear</Button>
+        <Button className={classes.buttonSubmit} fullWidth variant="contained" color="primary" size="large" type="submit">Submit</Button>
+        <Button className={classes.buttonClear} fullWidth variant="contained" color="secondary" size="small" onClick={clear} >Clear</Button>
 
       </form>
     </Paper>
