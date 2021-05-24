@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-
 import {TextField, Button, Typography, Paper} from '@material-ui/core';
 import FileBase from 'react-file-base64';
 import useStyles from './styles';
@@ -15,36 +14,43 @@ const Form = () => {
   const clear = () => {}
   return (
 
-    <Paper className={classes.paper} >
-      <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
-        <Typography variant="h6">Add a Distro</Typography>
+  <Paper className={classes.paper} >
+    <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
+      <Typography variant="h6">Add a Distro</Typography>
 
-        <TextField name="creator" label="Creator" fullWidth variant="outlined"
+      <TextField name="creator" label="Creator" fullWidth variant="outlined"
           value={distroData.creator}
           onChange={(e) => setDistroData({...distroData, creator: e.target.value})}
         />
 
-        <TextField name="distroName" label="Distro Name" fullWidth variant="outlined"
+      <TextField name="distroName" label="Distro Name" fullWidth variant="outlined"
           value={distroData.distroName}
           onChange={(e) => setDistroData({...distroData, distroName: e.target.value})}
         />
 
-        <TextField name="distroDescription" label="Description" multiline fullWidth variant="outlined"
+      <TextField name="distroDescription" label="Description" multiline fullWidth variant="outlined"
           value={distroData.distroDescription}
           onChange={(e) => setDistroData({...distroData, distroDescription: e.target.value})}
         />
 
-        <TextField name="tags" label="Tags" fullWidth variant="outlined"
+      <TextField name="tags" label="Tags" fullWidth variant="outlined"
           value={distroData.tags}
           onChange={(e) => setDistroData({...distroData, tags: e.target.value})}
         />
 
-        <div className={classes.fileInput}>
-          <FileBase
-            type="file"
-            multiple={false}
-            onDone={(base64) => setDistroData({...distroData, selectedFile: base64})}
-          />
+      <div className={classes.fileInput}>
+        <input
+          accept="image/*"
+          style={{ display: 'none' }}
+          id="raised-button-file"
+          multiple={false}
+          type="file"
+        />
+        <label htmlFor="raised-button-file">
+          <Button variant="raised" component="span">
+            Upload
+          </Button>
+        </label> 
         </div>
 
         <Button className={classes.buttonSubmit} fullWidth variant="contained" color="primary" size="large" type="submit">Submit</Button>

@@ -30,7 +30,7 @@ const Distro = () => {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small"><a href="https://archlinux.org">Learn More</a></Button>
+          <Button size="small" style={{ color: '#90caf9'}} href="https://archlinux.org">Learn More</Button>
         </CardActions>
       </Card>
 
