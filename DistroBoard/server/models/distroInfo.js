@@ -6,7 +6,8 @@ const distoSchema = mongoose.Schema({
   description: String,
   creator: String,
   tags: [String],
-  selectedFile: String,
+  distroLogo: String,
+  distroScreenshot: String,
   likeCount: {
     type: Number,
     default: 0,
