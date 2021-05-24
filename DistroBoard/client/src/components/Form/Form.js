@@ -6,7 +6,7 @@ import useStyles from './styles';
 
 const Form = () => {
   const [distroData, setDistroData] = useState({
-    creator: '', title: '', description: '', tags: '', selectedFile: ''
+    creator: '', title: '', description: '', tags: '', distroLogo: '', distroScreenshot: ''
   });
   const classes = useStyles();
 
@@ -43,7 +43,15 @@ const Form = () => {
           <FileBase
             type="file"
             multiple={false}
-            onDone={(base64) => setDistroData({...distroData, selectedFile: base64})}
+            onDone={(base64) => setDistroData({...distroData, distroLogo: base64})}
+          />
+        </div>
+
+        <div className={classes.fileInput}>
+          <FileBase
+            type="file"
+            multiple={false}
+            onDone={(base64) => setDistroData({...distroData, distroScreenshot: base64})}
           />
         </div>
 
