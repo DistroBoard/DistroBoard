@@ -9,4 +9,15 @@ export const getDistros = () => async (dispatch) => {
     console.log(error.msg);
   }
 
-}
+};
+
+export const createDistro = (distro) => async (dispatch) => {
+  try {
+    const {data} = await api.createDistro(distro);
+
+    dispatch({type: 'CREATE', payload: data});
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+

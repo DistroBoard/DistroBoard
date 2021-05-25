@@ -34,6 +34,7 @@ const Distro = () => {
         </CardActions>
       </Card>
 
+
     </>
   );
 }

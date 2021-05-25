@@ -2,11 +2,11 @@
 import express from 'express';
 
 // get handlers for our route
-import {getDistros, addDistros} from '../controllers/distros.js';
+import {getDistros, createDistro} from '../controllers/distros.js';
 
 const router = express.Router();
 
 router.get('/', getDistros);
-router.post('/', addDistros);
+router.post('/', createDistro);
 
 export default router;

@@ -2,8 +2,8 @@
 import mongoose from 'mongoose';
 
 const distoSchema = mongoose.Schema({
-  title: String,
-  description: String,
+  distroName: String,
+  distroDescription: String,
   creator: String,
   tags: [String],
   distroLogo: String,

@@ -1,5 +1,7 @@
 // this contains all the functionality for the route distros
 
+import express from 'express';
+import mongoose from 'mongoose';
 //get the mongo db schema
 import DistroInfo from '../models/distroInfo.js';
 
@@ -14,9 +16,9 @@ export const getDistros = async (req, res) => {
   }
 };
 
-export const addDistros = async (req, res) => {
+export const createDistro = async (req, res) => {
   //fetch information about distro from frontend
-  const distro = req.body();
+  const distro = req.body;
   // add the distro
   const newDistro = new DistroInfo(distro);
   try {
