@@ -22,9 +22,18 @@ yarn install
 
 * Start the application
 
+> Backend
+
 ```html
 cd DistroBoard/server
 yarn dev
+```
+
+> Frontend
+
+```html
+cd DistroBoard/client
+yarn start
 ```
 
 # Contributors
