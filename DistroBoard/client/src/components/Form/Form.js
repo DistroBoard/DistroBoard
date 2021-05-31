@@ -47,20 +47,19 @@ const Form = () => {
           onChange={(e) => setDistroData({...distroData, tags: e.target.value})}
         />
 
-        <div className={classes.fileInput}>
+        <div className={`${classes.root} ${classes.fileInput}`}>
           <FileBase
             type="file"
             multiple={false}
-            onDone={(base64) => setDistroData({...distroData, distroLogo: base64})}
-          />
+            onDone={(file) => setDistroData({...distroData, distroLogo: file.base64})} />
         </div>
 
-        <div className={classes.fileInput}>
+
+        <div className={`${classes.root} ${classes.fileInput}`}>
           <FileBase
             type="file"
             multiple={false}
-            onDone={(base64) => setDistroData({...distroData, distroScreenshot: base64})}
-          />
+            onDone={(file) => setDistroData({...distroData, distroScreenshot: file.base64})} />
         </div>
 
         <Button className={classes.buttonSubmit} fullWidth variant="contained" color="primary" size="large" type="submit">Submit</Button>
