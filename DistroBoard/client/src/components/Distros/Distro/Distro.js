@@ -8,7 +8,6 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import DeleteIcon from '@material-ui/icons/Delete';
 import LanguageIcon from '@material-ui/icons/Language';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
 
 const Distro = ({distro}) => {
   const classes = useStyles();
@@ -31,8 +30,8 @@ const Distro = ({distro}) => {
         </div>
 
         <CardContent>
-          <Typography variant="body2" color="textSecondary" component="h2"><LocationOnIcon fontSize="small" />{distro.distroOrigin}</Typography>
-          <Typography variant="body2" color="textSecondary" component="p">{distro.distroDescription}</Typography>
+          <Typography variant="body2" color="textSecondary" component="h2">Status:  {distro.distroStatus}</Typography>
+          <Typography variant="body2" color="textSecondary" component="h2">Origin:  {distro.distroOrigin}</Typography>
         </CardContent>
 
         <div className={classes.details}>

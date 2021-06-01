@@ -62,7 +62,7 @@ const Form = () => {
             onDone={(file) => setDistroData({...distroData, distroScreenshot: file.base64})} />
         </div>
 
-        <FormControl variant="filled" className={classes.countrySelect}>
+        <FormControl variant="filled" className={classes.dropdown}>
           <InputLabel>Country of origin</InputLabel>
           <Select onChange={(e) => setDistroData({...distroData, distroOrigin: e.target.value})}>
             <MenuItem value="India">India</MenuItem>
@@ -71,6 +71,14 @@ const Form = () => {
             <MenuItem value="France">France</MenuItem>
             <MenuItem value="Britain">Britain</MenuItem>
             <MenuItem value="Unknown">Unknown</MenuItem>
+          </Select>
+        </FormControl>
+
+        <FormControl variant="filled" className={classes.dropdown}>
+          <InputLabel>Development Status</InputLabel>
+          <Select onChange={(e) => setDistroData({...distroData, distroStatus: e.target.value})}>
+            <MenuItem value="Active">Active</MenuItem>
+            <MenuItem value="Inactive">Inactive</MenuItem>
           </Select>
         </FormControl>
 
