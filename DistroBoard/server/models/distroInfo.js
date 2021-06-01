@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 const distoSchema = mongoose.Schema({
   distroName: String,
   distroDescription: String,
-  creator: String,
+  distroUrl: String,
   tags: [String],
   distroLogo: String,
   distroScreenshot: String,
