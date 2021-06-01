@@ -25,8 +25,8 @@ export default makeStyles((theme) => ({
   buttonClear: {
     marginBottom: 10,
   },
-  countrySelect: {
+  dropdown: {
     width: '97%',
-    marginBottom: 40,
+    marginBottom: 10,
   },
 }));
