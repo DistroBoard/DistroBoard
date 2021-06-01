@@ -8,6 +8,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import DeleteIcon from '@material-ui/icons/Delete';
 import LanguageIcon from '@material-ui/icons/Language';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
 
 const Distro = ({distro}) => {
   const classes = useStyles();
@@ -30,6 +31,7 @@ const Distro = ({distro}) => {
         </div>
 
         <CardContent>
+          <Typography variant="body2" color="textSecondary" component="h2"><LocationOnIcon fontSize="small" />{distro.distroOrigin}</Typography>
           <Typography variant="body2" color="textSecondary" component="p">{distro.distroDescription}</Typography>
         </CardContent>
 
@@ -40,7 +42,6 @@ const Distro = ({distro}) => {
         <CardActions className={classes.cardActions}>
           <Tooltip title="Like this distro" aria-label="like"><IconButton size="small" color="secondary"> <FavoriteIcon fontSize="small" /> </IconButton></Tooltip>
           <Tooltip title="Visit site" aria-label="visit"><IconButton size="small" color="secondary" href={`${distro.distroUrl} `} target="_blank" > <LanguageIcon fontSize="small" /> </IconButton></Tooltip>
-
           <Tooltip title="Delete this distro" aria-label="delete"><IconButton size="small" color="secondary"><DeleteIcon fontSize="small" /> </IconButton></Tooltip>
         </CardActions>
 

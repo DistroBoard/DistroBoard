@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
 
-import {TextField, Button, Typography, Paper} from '@material-ui/core';
+import {TextField, Button, Typography, Paper, Select, MenuItem, FormControl, InputLabel} from '@material-ui/core';
 import FileBase from 'react-file-base64';
 import useStyles from './styles';
 import {useDispatch} from 'react-redux';
 import {createDistro} from '../../actions/distros';
 const Form = () => {
   const [distroData, setDistroData] = useState({
-    distroUrl: '', distroName: '', distroDescription: '', tags: '', distroLogo: '', distroScreenshot: ''
+    distroUrl: '', distroName: '', distroDescription: '', tags: '', distroLogo: '', distroScreenshot: '', distroOrigin: ''
   });
   const classes = useStyles();
   const dispatch = useDispatch();
@@ -61,6 +61,17 @@ const Form = () => {
             multiple={false}
             onDone={(file) => setDistroData({...distroData, distroScreenshot: file.base64})} />
         </div>
+
+        <FormControl variant="filled" className={classes.countrySelect}>
+          <InputLabel>Country of origin</InputLabel>
+          <Select onChange={(e) => setDistroData({...distroData, distroOrigin: e.target.value})}>
+            <MenuItem value="India">India</MenuItem>
+            <MenuItem value="USA">USA</MenuItem>
+            <MenuItem value="France">France</MenuItem>
+            <MenuItem value="Britain">Britain</MenuItem>
+            <MenuItem value="Unknown">Unknown</MenuItem>
+          </Select>
+        </FormControl>
 
         <Button className={classes.buttonSubmit} fullWidth variant="contained" color="primary" size="large" type="submit">Submit</Button>
         <Button className={classes.buttonClear} fullWidth variant="contained" color="secondary" size="large" onClick={clear} >Clear</Button>
