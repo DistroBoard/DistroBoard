@@ -7,7 +7,7 @@ import {useDispatch} from 'react-redux';
 import {createDistro} from '../../actions/distros';
 const Form = () => {
   const [distroData, setDistroData] = useState({
-    creator: '', title: '', description: '', tags: '', distroLogo: '', distroScreenshot: ''
+    distroUrl: '', distroName: '', distroDescription: '', tags: '', distroLogo: '', distroScreenshot: ''
   });
   const classes = useStyles();
   const dispatch = useDispatch();
@@ -23,12 +23,6 @@ const Form = () => {
       <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
         <Typography variant="h6">Add a Distro</Typography>
 
-        <TextField name="creator" label="Creator" fullWidth variant="outlined"
-          placeholder="Your name "
-          value={distroData.creator}
-          onChange={(e) => setDistroData({...distroData, creator: e.target.value})}
-        />
-
         <TextField name="distroName" label="Distro Name" fullWidth variant="outlined"
           placeholder="Add distribution name "
           value={distroData.distroName}
@@ -39,6 +33,12 @@ const Form = () => {
           placeholder="Add distribution description "
           value={distroData.distroDescription}
           onChange={(e) => setDistroData({...distroData, distroDescription: e.target.value})}
+        />
+
+        <TextField name="distroUrl" label="URL" fullWidth variant="outlined"
+          placeholder="Official site link for distro"
+          value={distroData.distroUrl}
+          onChange={(e) => setDistroData({...distroData, distroUrl: e.target.value})}
         />
 
         <TextField name="tags" label="Tags" fullWidth variant="outlined"
