@@ -66,6 +66,7 @@ const Form = () => {
           <InputLabel>Country of origin</InputLabel>
           <Select onChange={(e) => setDistroData({...distroData, distroOrigin: e.target.value})}>
             <MenuItem value="India">India</MenuItem>
+            <MenuItem value="Canada">Canada</MenuItem>
             <MenuItem value="USA">USA</MenuItem>
             <MenuItem value="France">France</MenuItem>
             <MenuItem value="Britain">Britain</MenuItem>
