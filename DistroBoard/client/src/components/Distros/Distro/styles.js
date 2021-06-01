@@ -13,12 +13,17 @@ export default makeStyles({
   fullHeightCard: {
     height: '100%',
   },
+  logo: {
+    width: '40px',
+    height: '40px',
+    marginTop: '-35px',
+  },
   card: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
-    borderRadius: '15px',
-    height: '100%',
+    height: '110%',
+    width: '200px',
     position: 'relative',
   },
   overlay: {
@@ -39,7 +44,8 @@ export default makeStyles({
   details: {
     display: 'flex',
     justifyContent: 'space-between',
-    margin: '20px',
+    margin: '10px',
+
   },
   title: {
     padding: '0 16px',
