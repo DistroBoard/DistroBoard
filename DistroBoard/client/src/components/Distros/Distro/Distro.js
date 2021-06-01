@@ -6,6 +6,7 @@ import {Card, CardActions, CardContent, CardMedia, IconButton, Typography, Avata
 
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import DeleteIcon from '@material-ui/icons/Delete';
+import LanguageIcon from '@material-ui/icons/Language';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 
 const Distro = ({distro}) => {
@@ -38,6 +39,8 @@ const Distro = ({distro}) => {
 
         <CardActions className={classes.cardActions}>
           <Tooltip title="Like this distro" aria-label="like"><IconButton size="small" color="secondary"> <FavoriteIcon fontSize="small" /> </IconButton></Tooltip>
+          <Tooltip title="Visit site" aria-label="visit"><IconButton size="small" color="secondary" href={`${distro.distroUrl} `} target="_blank" > <LanguageIcon fontSize="small" /> </IconButton></Tooltip>
+
           <Tooltip title="Delete this distro" aria-label="delete"><IconButton size="small" color="secondary"><DeleteIcon fontSize="small" /> </IconButton></Tooltip>
         </CardActions>
 
