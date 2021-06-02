@@ -7,7 +7,7 @@ import {useDispatch} from 'react-redux';
 import {createDistro} from '../../actions/distros';
 const Form = () => {
   const [distroData, setDistroData] = useState({
-    distroUrl: '', distroName: '', distroDescription: '', tags: '', distroLogo: '', distroScreenshot: '', distroOrigin: ''
+    distroUrl: '', distroName: '', distroDescription: '', tags: '', distroLogo: '', distroScreenshot: '', distroOrigin: '', distroRelease: ''
   });
   const classes = useStyles();
   const dispatch = useDispatch();
@@ -71,10 +71,18 @@ const Form = () => {
         </FormControl>
 
         <FormControl variant="filled" className={classes.dropdown}>
+          <InputLabel>Release Type</InputLabel>
+          <Select onChange={(e) => setDistroData({...distroData, distroRelease: e.target.value})}>
+            <MenuItem value="Status">Stable</MenuItem>
+            <MenuItem value="Rolling">Rolling</MenuItem>
+          </Select>
+        </FormControl>
+
+        <FormControl variant="filled" className={classes.dropdown}>
           <InputLabel>Country of origin</InputLabel>
           <Select onChange={(e) => setDistroData({...distroData, distroOrigin: e.target.value})} >
-            <MenuItem value="Global">Unknown origin (treated as global)</MenuItem>
 
+            <MenuItem value="Global">Unknown origin (treated as global)</MenuItem>
             <MenuItem value="Afghanistan">Afghanistan</MenuItem>
             <MenuItem value="Albania">Albania</MenuItem>
             <MenuItem value="Algeria">Algeria</MenuItem>
