@@ -9,7 +9,8 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import LanguageIcon from '@material-ui/icons/Language';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
-import CodeIcon from '@material-ui/icons/Code';
+import NewReleasesIcon from '@material-ui/icons/NewReleases';
+import InfoIcon from '@material-ui/icons/Info';
 
 const Distro = ({distro}) => {
   const classes = useStyles();
@@ -32,7 +33,8 @@ const Distro = ({distro}) => {
         </div>
 
         <CardContent>
-          <Typography variant="body2" color="textPrimary" component="h2"><Tooltip title="Development" aria-label="status"><CodeIcon className={classes.icons} fontSize="small" color="Secondary" /></Tooltip> {distro.distroStatus}</Typography>
+          <Typography variant="body2" color="textPrimary" component="h2"><Tooltip title="Development" aria-label="status"><InfoIcon className={classes.icons} fontSize="small" color="Secondary" /></Tooltip> {distro.distroStatus}</Typography>
+          <Typography variant="body2" color="textPrimary" component="h2"><Tooltip title="Release type" aria-label="release"><NewReleasesIcon className={classes.icons} fontSize="small" color="Secondary" /></Tooltip> Rolling</Typography>
           <Typography variant="body2" color="textPrimary" component="h2"><Tooltip title="Origin" aria-label="origin"><LocationOnIcon className={classes.icons} fontSize="small" color="Secondary" /></Tooltip> {distro.distroOrigin}</Typography>
         </CardContent>
 
@@ -43,9 +45,9 @@ const Distro = ({distro}) => {
         */}
 
         <CardActions className={classes.cardActions}>
-          <Tooltip title="Like this distro" aria-label="like"><IconButton size="small" color="secondary"> <FavoriteIcon fontSize="small" /> </IconButton></Tooltip>
-          <Tooltip title="Visit site" aria-label="visit"><IconButton size="small" color="secondary" href={`${distro.distroUrl} `} target="_blank" > <LanguageIcon fontSize="small" /> </IconButton></Tooltip>
-          <Tooltip title="Delete this distro" aria-label="delete"><IconButton size="small" color="secondary"><DeleteIcon fontSize="small" /> </IconButton></Tooltip>
+          <Tooltip title="Like this distro" aria-label="like"><IconButton size="small" style={{color: "#f73378"}} > <FavoriteIcon fontSize="small" /> </IconButton></Tooltip>
+          <Tooltip title="Visit site" aria-label="visit"><IconButton size="small" style={{color: "#f73378"}} href={`${distro.distroUrl} `} target="_blank" > <LanguageIcon fontSize="small" /> </IconButton></Tooltip>
+          <Tooltip title="Delete this distro" aria-label="delete"><IconButton size="small" style={{color: "#f73378"}} > <DeleteIcon fontSize="small" /> </IconButton></Tooltip>
         </CardActions>
 
       </Card>
