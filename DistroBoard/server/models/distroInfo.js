@@ -8,6 +8,9 @@ const distoSchema = mongoose.Schema({
   tags: [String],
   distroLogo: String,
   distroScreenshot: String,
+  distroOrigin: String,
+  distroStatus: String,
+  distroRelease: String,
   likeCount: {
     type: Number,
     default: 0,

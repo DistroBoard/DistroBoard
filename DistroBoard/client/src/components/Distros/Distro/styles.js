@@ -18,12 +18,15 @@ export default makeStyles({
     height: '40px',
     marginTop: '-35px',
   },
+  icons: {
+    paddingTop: '5px',
+  },
   card: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
     height: '100%',
-    width: '250px',
+    width: '200px',
     position: 'relative',
   },
   overlay: {
@@ -45,6 +48,7 @@ export default makeStyles({
     display: 'flex',
     justifyContent: 'space-between',
     margin: '10px',
+    marginBottom: '-5px',
 
   },
   title: {
