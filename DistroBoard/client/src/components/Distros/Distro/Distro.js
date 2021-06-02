@@ -8,6 +8,8 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import DeleteIcon from '@material-ui/icons/Delete';
 import LanguageIcon from '@material-ui/icons/Language';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+import CodeIcon from '@material-ui/icons/Code';
 
 const Distro = ({distro}) => {
   const classes = useStyles();
@@ -30,13 +32,15 @@ const Distro = ({distro}) => {
         </div>
 
         <CardContent>
-          <Typography variant="body2" color="textSecondary" component="h2">Status:  {distro.distroStatus}</Typography>
-          <Typography variant="body2" color="textSecondary" component="h2">Origin:  {distro.distroOrigin}</Typography>
+          <Typography variant="body2" color="textPrimary" component="h2"><Tooltip title="Development" aria-label="status"><CodeIcon className={classes.icons} fontSize="small" color="Secondary" /></Tooltip> {distro.distroStatus}</Typography>
+          <Typography variant="body2" color="textPrimary" component="h2"><Tooltip title="Origin" aria-label="origin"><LocationOnIcon className={classes.icons} fontSize="small" color="Secondary" /></Tooltip> {distro.distroOrigin}</Typography>
         </CardContent>
 
+        {/*        
         <div className={classes.details}>
           <Typography variant="body2" color="textSecondary" component="h2">{distro.tags.map((tag) => `#${tag} `)}</Typography>
         </div>
+        */}
 
         <CardActions className={classes.cardActions}>
           <Tooltip title="Like this distro" aria-label="like"><IconButton size="small" color="secondary"> <FavoriteIcon fontSize="small" /> </IconButton></Tooltip>
