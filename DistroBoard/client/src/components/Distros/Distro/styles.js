@@ -26,7 +26,6 @@ export default makeStyles({
     flexDirection: 'column',
     justifyContent: 'space-between',
     height: '100%',
-    width: '200px',
     position: 'relative',
   },
   overlay: {
