@@ -11,6 +11,7 @@ import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import NewReleasesIcon from '@material-ui/icons/NewReleases';
 import InfoIcon from '@material-ui/icons/Info';
+import ExtensionIcon from '@material-ui/icons/Extension';
 
 const Distro = ({distro}) => {
   const classes = useStyles();
@@ -34,8 +35,9 @@ const Distro = ({distro}) => {
 
         <CardContent>
           <Typography variant="body2" color="textPrimary" component="h2"><Tooltip title="Development" aria-label="status"><InfoIcon className={classes.icons} fontSize="small" color="Secondary" /></Tooltip> {distro.distroStatus}</Typography>
+          <Typography variant="body2" color="textPrimary" component="h2"><Tooltip title="Based on" aria-label="base"><ExtensionIcon className={classes.icons} fontSize="small" color="Secondary" /></Tooltip> {distro.distroBase}</Typography>
           <Typography variant="body2" color="textPrimary" component="h2"><Tooltip title="Release type" aria-label="release"><NewReleasesIcon className={classes.icons} fontSize="small" color="Secondary" /></Tooltip> {distro.distroRelease}</Typography>
-          <Typography variant="body2" color="textPrimary" component="h2"><Tooltip title="Origin" aria-label="origin"><LocationOnIcon className={classes.icons} fontSize="small" color="Secondary" /></Tooltip>{distro.distroOrigin}</Typography>
+          <Typography variant="body2" color="textPrimary" component="h2"><Tooltip title="Origin" aria-label="origin"><LocationOnIcon className={classes.icons} fontSize="small" color="Secondary" /></Tooltip>  {distro.distroOrigin}</Typography>
         </CardContent>
 
         {/*        

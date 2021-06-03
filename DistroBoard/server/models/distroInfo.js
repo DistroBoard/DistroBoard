@@ -11,6 +11,7 @@ const distoSchema = mongoose.Schema({
   distroOrigin: String,
   distroStatus: String,
   distroRelease: String,
+  distroBase: String,
   likeCount: {
     type: Number,
     default: 0,

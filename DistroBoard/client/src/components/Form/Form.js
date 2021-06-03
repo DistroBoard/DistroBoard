@@ -73,8 +73,34 @@ const Form = () => {
         <FormControl variant="filled" className={classes.dropdown}>
           <InputLabel>Release Type</InputLabel>
           <Select defaultValue="" onChange={(e) => setDistroData({...distroData, distroRelease: e.target.value})}>
-            <MenuItem value="Status">Stable</MenuItem>
+            <MenuItem value="Stable">Stable</MenuItem>
             <MenuItem value="Rolling">Rolling</MenuItem>
+          </Select>
+        </FormControl>
+
+        <FormControl variant="filled" className={classes.dropdown}>
+          <InputLabel>Based on</InputLabel>
+          <Select defaultValue="" onChange={(e) => setDistroData({...distroData, distroBase: e.target.value})}>
+            <MenuItem value="Independent">Independent</MenuItem>
+            <MenuItem value="Unknown">Unknown</MenuItem>
+            <MenuItem value="Arch">Arch</MenuItem>
+            <MenuItem value="CentOS">CentOS</MenuItem>
+            <MenuItem value="ChromuimOS">ChromuimOS</MenuItem>
+            <MenuItem value="Debian">Debian</MenuItem>
+            <MenuItem value="Fedora">Fedora</MenuItem>
+            <MenuItem value="FreeBSD">FreeBSD</MenuItem>
+            <MenuItem value="Gentoo">Gentoo</MenuItem>
+            <MenuItem value="KDE-Neon">KDE-Neon</MenuItem>
+            <MenuItem value="LFS">LFS</MenuItem>
+            <MenuItem value="Mageia">Mageia</MenuItem>
+            <MenuItem value="Mandriva">Mandriva</MenuItem>
+            <MenuItem value="Mint">Mint</MenuItem>
+            <MenuItem value="OpenBSD">OpenBSD</MenuItem>
+            <MenuItem value="OpenSolaris">OpenSolaris</MenuItem>
+            <MenuItem value="OpenSUSE">OpenSUSE</MenuItem>
+            <MenuItem value="Redhat">Redhat</MenuItem>
+            <MenuItem value="Solaris">Solaris</MenuItem>
+            <MenuItem value="Ubuntu">Ubuntu</MenuItem>
           </Select>
         </FormControl>
 
