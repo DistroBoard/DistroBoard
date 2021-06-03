@@ -64,7 +64,7 @@ const Form = () => {
 
         <FormControl variant="filled" className={classes.dropdown}>
           <InputLabel>Development Status</InputLabel>
-          <Select onChange={(e) => setDistroData({...distroData, distroStatus: e.target.value})}>
+          <Select defaultValue="" onChange={(e) => setDistroData({...distroData, distroStatus: e.target.value})}>
             <MenuItem value="Active">Active</MenuItem>
             <MenuItem value="Inactive">Inactive</MenuItem>
           </Select>
@@ -72,7 +72,7 @@ const Form = () => {
 
         <FormControl variant="filled" className={classes.dropdown}>
           <InputLabel>Release Type</InputLabel>
-          <Select onChange={(e) => setDistroData({...distroData, distroRelease: e.target.value})}>
+          <Select defaultValue="" onChange={(e) => setDistroData({...distroData, distroRelease: e.target.value})}>
             <MenuItem value="Status">Stable</MenuItem>
             <MenuItem value="Rolling">Rolling</MenuItem>
           </Select>
@@ -80,7 +80,7 @@ const Form = () => {
 
         <FormControl variant="filled" className={classes.dropdown}>
           <InputLabel>Country of origin</InputLabel>
-          <Select onChange={(e) => setDistroData({...distroData, distroOrigin: e.target.value})} >
+          <Select defaultValue="" onChange={(e) => setDistroData({...distroData, distroOrigin: e.target.value})} >
 
             <MenuItem value="Global">Unknown origin (treated as global)</MenuItem>
             <MenuItem value="Afghanistan">Afghanistan</MenuItem>
