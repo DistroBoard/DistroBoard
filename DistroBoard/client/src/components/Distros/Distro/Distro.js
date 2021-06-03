@@ -34,10 +34,10 @@ const Distro = ({distro}) => {
         </div>
 
         <CardContent>
-          <Typography variant="body2" color="textPrimary" component="h2"><Tooltip title="Development" aria-label="status"><InfoIcon className={classes.icons} fontSize="small" color="Secondary" /></Tooltip> {distro.distroStatus}</Typography>
-          <Typography variant="body2" color="textPrimary" component="h2"><Tooltip title="Based on" aria-label="base"><ExtensionIcon className={classes.icons} fontSize="small" color="Secondary" /></Tooltip> {distro.distroBase}</Typography>
-          <Typography variant="body2" color="textPrimary" component="h2"><Tooltip title="Release type" aria-label="release"><NewReleasesIcon className={classes.icons} fontSize="small" color="Secondary" /></Tooltip> {distro.distroRelease}</Typography>
-          <Typography variant="body2" color="textPrimary" component="h2"><Tooltip title="Origin" aria-label="origin"><LocationOnIcon className={classes.icons} fontSize="small" color="Secondary" /></Tooltip>  {distro.distroOrigin}</Typography>
+          <Typography variant="body2" color="textPrimary" component="h2"><Tooltip title="Development" aria-label="status"><InfoIcon className={classes.icons} fontSize="small" style={{color: "#f48fb1"}} /></Tooltip> {distro.distroStatus}</Typography>
+          <Typography variant="body2" color="textPrimary" component="h2"><Tooltip title="Based on" aria-label="base"><ExtensionIcon className={classes.icons} fontSize="small" style={{color: "#f48fb1"}} /></Tooltip> {distro.distroBase}</Typography>
+          <Typography variant="body2" color="textPrimary" component="h2"><Tooltip title="Release type" aria-label="release"><NewReleasesIcon className={classes.icons} fontSize="small" style={{color: "#f48fb1"}} /></Tooltip> {distro.distroRelease}</Typography>
+          <Typography variant="body2" color="textPrimary" component="h2"><Tooltip title="Origin" aria-label="origin"><LocationOnIcon className={classes.icons} fontSize="small" style={{color: "#f48fb1"}} /></Tooltip>  {distro.distroOrigin}</Typography>
         </CardContent>
 
         {/*        
