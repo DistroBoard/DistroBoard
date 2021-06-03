@@ -104,12 +104,12 @@ const Form = () => {
             <MenuItem value="Benin">Benin</MenuItem>
             <MenuItem value="Bhutan">Bhutan</MenuItem>
             <MenuItem value="Bolivia">Bolivia</MenuItem>
-            <MenuItem value="Bosnia and Herzegovina	">Bosnia and Herzegovina	</MenuItem>
+            <MenuItem value="Bosnia and Herzegovina">Bosnia and Herzegovina</MenuItem>
             <MenuItem value="Botswana">Botswana</MenuItem>
             <MenuItem value="Brazil">Brazil</MenuItem>
             <MenuItem value="Brunei">Brunei</MenuItem>
             <MenuItem value="Bulgaria">Bulgaria</MenuItem>
-            <MenuItem value="Burkina Faso	">Burkina Faso	</MenuItem>
+            <MenuItem value="Burkina Faso">Burkina Faso</MenuItem>
             <MenuItem value="Burundi">Burundi</MenuItem>
             <MenuItem value="Côte d'Ivoire">Côte d'Ivoire</MenuItem>
             <MenuItem value="Cabo Verde	">Cabo Verde	</MenuItem>
@@ -122,7 +122,7 @@ const Form = () => {
             <MenuItem value="China">China</MenuItem>
             <MenuItem value="Colombia">Colombia</MenuItem>
             <MenuItem value="Comoros">Comoros</MenuItem>
-            <MenuItem value="Congo (Congo-Brazzaville)">Congo (Congo-Brazzaville)</MenuItem>
+            <MenuItem value="Congo">Congo (Congo-Brazzaville)</MenuItem>
             <MenuItem value="Costa Rica">Costa Rica</MenuItem>
             <MenuItem value="Croatia">Croatia</MenuItem>
             <MenuItem value="Cuba">Cuba</MenuItem>
@@ -200,7 +200,7 @@ const Form = () => {
             <MenuItem value="Montenegro">Montenegro</MenuItem>
             <MenuItem value="Morocco">Morocco</MenuItem>
             <MenuItem value="Mozambique">Mozambique</MenuItem>
-            <MenuItem value="Myanmar (formerly Burma)">Myanmar (formerly Burma)</MenuItem>
+            <MenuItem value="Myanmar">Myanmar (formerly Burma)</MenuItem>
             <MenuItem value="Namibia">Namibia</MenuItem>
             <MenuItem value="Nauru">Nauru</MenuItem>
             <MenuItem value="Nepal">Nepal</MenuItem>
@@ -266,7 +266,7 @@ const Form = () => {
             <MenuItem value="Uganda">Uganda</MenuItem>
             <MenuItem value="Ukraine">Ukraine</MenuItem>
             <MenuItem value="United Arab Emirates">United Arab Emirates</MenuItem>
-            <MenuItem value="United Kingdom	">United Kingdom	</MenuItem>
+            <MenuItem value="United Kingdom">United Kingdom</MenuItem>
             <MenuItem value="United States of America">United States of America</MenuItem>
             <MenuItem value="Uruguay">Uruguay</MenuItem>
             <MenuItem value="Uzbekistan">Uzbekistan</MenuItem>
