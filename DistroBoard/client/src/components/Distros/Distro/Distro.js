@@ -35,7 +35,7 @@ const Distro = ({distro}) => {
         <CardContent>
           <Typography variant="body2" color="textPrimary" component="h2"><Tooltip title="Development" aria-label="status"><InfoIcon className={classes.icons} fontSize="small" color="Secondary" /></Tooltip> {distro.distroStatus}</Typography>
           <Typography variant="body2" color="textPrimary" component="h2"><Tooltip title="Release type" aria-label="release"><NewReleasesIcon className={classes.icons} fontSize="small" color="Secondary" /></Tooltip> {distro.distroRelease}</Typography>
-          <Typography variant="body2" color="textPrimary" component="h2"><Tooltip title="Origin" aria-label="origin"><LocationOnIcon className={classes.icons} fontSize="small" color="Secondary" /></Tooltip> {distro.distroOrigin}</Typography>
+          <Typography variant="body2" color="textPrimary" component="h2"><Tooltip title="Origin" aria-label="origin"><LocationOnIcon className={classes.icons} fontSize="small" color="Secondary" /></Tooltip>{distro.distroOrigin}</Typography>
         </CardContent>
 
         {/*        
