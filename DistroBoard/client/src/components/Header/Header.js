@@ -1,6 +1,7 @@
 import React from 'react';
 import {AppBar, Toolbar, Typography, IconButton, Tooltip, Avatar} from '@material-ui/core';
 
+import Search from "../Search/Search";
 import logo from "../../assets/images/logo.svg";
 import useStyles from './styles';
 
@@ -14,6 +15,9 @@ const Header = () => {
       <Toolbar>
         <Avatar alt="Logo" className={classes.logo} variant="square" src={logo} />
         <Typography variant="h6" style={{flexGrow: 1}}>DistroBoard</Typography>
+
+
+        <Search />
 
         <Tooltip title="Distro Picker" aria-label="distro-picker"><IconButton color="inherit"><CasinoIcon /></IconButton></Tooltip>
         <Tooltip title="Donate" aria-label="donate"><IconButton color="inherit"><FavoriteIcon /></IconButton></Tooltip>
