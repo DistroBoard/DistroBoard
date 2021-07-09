@@ -1,7 +1,7 @@
 # DistroBoard
 A modern and opensource alternative to distrowatch
 
-<<<<<<< HEAD
+
 # Notes for developers
 
 ## Instructions to run application in develpment
@@ -48,4 +48,4 @@ yarn start
 | [VULKAN](https://github.com/CTZxVULKAN)             | FullStack Web Dev |
 | [Abdellatif-dev](https://github.com/abdellatif-dev) | Server Guy        |
 | [NarutoXY](https://github.com/NarutoXY)             | FrontEnd Web Dev  |
->>>>>>> 5bee731a16a6b32ea967f45192184c43d25e4dc6
+
