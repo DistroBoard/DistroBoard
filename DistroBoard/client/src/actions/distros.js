@@ -40,3 +40,13 @@ export const deleteDistro = (id) => async (dispatch) => {
     console.log(error.message);
   }
 };
+
+export const likeDistro = (id) => async (dispatch) => {
+  try {
+    const {data} = await api.likeDistro(id);
+
+    dispatch({type: 'LIKE', payload: data});
+  } catch (error) {
+    console.log(error.message);
+  }
+};

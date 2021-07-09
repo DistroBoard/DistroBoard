@@ -10,6 +10,8 @@ const distroReducer = (distros = [], action) => {
       return distros.map((distro) => (distro._id === action.payload._id ? action.payload : distro));
     case 'DELETE':
       return distros.filter((distro) => distro._id !== action.payload);
+    case 'LIKE':
+      return distros.map((distro) => (distro._id === action.payload._id ? action.payload : distro));
 
     default:
       return distros;

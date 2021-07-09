@@ -52,4 +52,15 @@ export const deleteDistro = async (req, res) => {
   await DistroInfo.findByIdAndRemove(_id);
 
   res.json({message: "Distro removed successfully."});
-}
+};
+
+export const likeDistro = async (req, res) => {
+  const {id: _id} = req.params;
+
+  if (!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).send(`No distro with id`);
+  const distro = await DistroInfo.findById(_id);
+  const updatedDistro = await DistroInfo.findByIdAndUpdate(_id, {likeCount: distro.likeCount + 1}, {new: true});
+
+  res.json(updatedDistro);
+};
+
