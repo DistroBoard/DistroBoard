@@ -30,3 +30,13 @@ export const updateDistro = (id, distro) => async (dispatch) => {
     console.log(error);
   }
 };
+
+export const deleteDistro = (id) => async (dispatch) => {
+  try {
+    await api.deleteDistro(id);
+
+    dispatch({type: 'DELETE', payload: id});
+  } catch (error) {
+    console.log(error.message);
+  }
+};

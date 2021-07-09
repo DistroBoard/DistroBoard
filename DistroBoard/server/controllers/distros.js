@@ -33,7 +33,7 @@ export const createDistro = async (req, res) => {
 export const updateDistro = async (req, res) => {
   const {id: _id} = req.params;
   const distro = req.body;
-  if (!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).send(`No post with id`);
+  if (!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).send(`No distro with that id`);
 
   //const updatedDistro = {distroUrl, distroName, distroDescription, tags, distroLogo, distroScreenshot, _id: id};
 
@@ -44,4 +44,12 @@ export const updateDistro = async (req, res) => {
   res.json(updatedDistro);
 };
 
+export const deleteDistro = async (req, res) => {
+  const {id: _id} = req.params;
 
+  if (!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).send(`No distro with that id`);
+
+  await DistroInfo.findByIdAndRemove(_id);
+
+  res.json({message: "Distro removed successfully."});
+}

@@ -1,6 +1,8 @@
 import React from 'react';
 import useStyles from './styles';
+import {useDispatch} from 'react-redux';
 
+import {deleteDistro} from '../../../actions/distros'
 
 import {Card, CardActions, CardContent, CardMedia, IconButton, Typography, Avatar, Tooltip} from '@material-ui/core/';
 
@@ -15,6 +17,7 @@ import ExtensionIcon from '@material-ui/icons/Extension';
 
 const Distro = ({distro, setCurrentId}) => {
   const classes = useStyles();
+  const dispatch = useDispatch();
   return (
     <>
       <Card className={classes.card}>
@@ -51,7 +54,7 @@ const Distro = ({distro, setCurrentId}) => {
         <CardActions className={classes.cardActions}>
           <Tooltip title="Like this distro" aria-label="like"><IconButton size="small" style={{color: "#f73378"}} > <FavoriteIcon fontSize="small" /> </IconButton></Tooltip>
           <Tooltip title="Visit site" aria-label="visit"><IconButton size="small" style={{color: "#f73378"}} href={`${distro.distroUrl} `} target="_blank" > <LanguageIcon fontSize="small" /> </IconButton></Tooltip>
-          <Tooltip title="Delete this distro" aria-label="delete"><IconButton size="small" style={{color: "#f73378"}} > <DeleteIcon fontSize="small" /> </IconButton></Tooltip>
+          <Tooltip title="Delete this distro" aria-label="delete"><IconButton size="small" style={{color: "#f73378"}} onClick={() => dispatch(deleteDistro(distro._id))} > <DeleteIcon fontSize="small" /> </IconButton></Tooltip>
         </CardActions>
 
       </Card>
