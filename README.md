@@ -41,7 +41,7 @@ yarn start
 - [VULKAN](https://github.com/CTZxVULKAN)
 - [Abdellatif-dev](https://github.com/abdellatif-dev)
 - [Coder684](https://github.com/Coder684)
-=======
+
 # Key Developers
 | Contributor                                         | Role              |
 |-----------------------------------------------------|-------------------|
