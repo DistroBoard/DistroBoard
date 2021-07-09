@@ -13,7 +13,7 @@ import NewReleasesIcon from '@material-ui/icons/NewReleases';
 import InfoIcon from '@material-ui/icons/Info';
 import ExtensionIcon from '@material-ui/icons/Extension';
 
-const Distro = ({distro}) => {
+const Distro = ({distro, setCurrentId}) => {
   const classes = useStyles();
   return (
     <>
@@ -26,7 +26,9 @@ const Distro = ({distro}) => {
         </div>
 
         <div className={classes.overlay2}>
-          <Tooltip title="Edit info" aria-label="edit"><IconButton size="small"><MoreHorizIcon fontSize="default" /></IconButton></Tooltip>
+          <Tooltip title="Edit info" aria-label="edit"><IconButton size="small"><MoreHorizIcon fontSize="default"
+            onClick={() => setCurrentId(distro._id)} />
+          </IconButton></Tooltip>
         </div>
 
         <div className={classes.details}>

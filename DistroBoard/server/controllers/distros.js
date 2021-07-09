@@ -1,5 +1,4 @@
 // this contains all the functionality for the route distros
-
 import express from 'express';
 import mongoose from 'mongoose';
 //get the mongo db schema
@@ -29,6 +28,20 @@ export const createDistro = async (req, res) => {
     //if there is an error return a message
     res.status(409).json({message: error.message});
   }
+};
+
+export const updateDistro = async (req, res) => {
+  const {id: _id} = req.params;
+  const distro = req.body;
+  if (!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).send(`No post with id`);
+
+  //const updatedDistro = {distroUrl, distroName, distroDescription, tags, distroLogo, distroScreenshot, _id: id};
+
+  const updatedDistro = await DistroInfo.findByIdAndUpdate(_id, {...distro, _id}, {new: true});
+
+  //await DistroInfo.findByIdAndUpdate(id, updatedDistro, {new: true});
+
+  res.json(updatedDistro);
 };
 
 

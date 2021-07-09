@@ -2,11 +2,12 @@
 import express from 'express';
 
 // get handlers for our route
-import {getDistros, createDistro} from '../controllers/distros.js';
+import {getDistros, createDistro, updateDistro} from '../controllers/distros.js';
 
 const router = express.Router();
 
 router.get('/', getDistros);
 router.post('/', createDistro);
+router.patch('/:id', updateDistro);
 
 export default router;

@@ -1,27 +1,52 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 import {TextField, Button, Typography, Paper, Select, MenuItem, FormControl, InputLabel} from '@material-ui/core';
 import FileBase from 'react-file-base64';
 import useStyles from './styles';
-import {useDispatch} from 'react-redux';
-import {createDistro} from '../../actions/distros';
-const Form = () => {
+import {useDispatch, useSelector} from 'react-redux';
+import {createDistro, updateDistro} from '../../actions/distros';
+
+
+const Form = ({currentId, setCurrentId}) => {
+
+  const classes = useStyles();
+
   const [distroData, setDistroData] = useState({
     distroUrl: '', distroName: '', distroDescription: '', tags: '', distroLogo: '', distroScreenshot: '', distroOrigin: '', distroRelease: ''
   });
-  const classes = useStyles();
+
+  const distro = useSelector((state) => (currentId ? state.distros.find((currentDistro) => currentDistro._id === currentId) : null));
+
+
+  useEffect(() => {
+    if (distro) setDistroData(distro);
+  }, [distro]);
+
   const dispatch = useDispatch();
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(createDistro(distroData));
+
+    //check if we have a currentId to update distro
+    if (currentId) {
+      dispatch(updateDistro(currentId, distroData));
+    } else {
+      //if we dont have a currentId then make a new distro
+      dispatch(createDistro(distroData));
+    }
+    clear();
   }
 
-  const clear = () => {}
+  const clear = () => {
+    setCurrentId(null);
+    setDistroData({distroUrl: '', distroName: '', distroDescription: '', tags: '', distroLogo: '', distroScreenshot: '', distroOrigin: '', distroRelease: ''});
+  }
+
   return (
 
     <Paper className={classes.paper} >
       <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
-        <Typography variant="h6">Add a Distro</Typography>
+        <Typography variant="h6">{currentId ? `Edit "${distro.distroName}"` : 'Add a Distro'}</Typography>
 
         <TextField name="distroName" label="Distro Name" fullWidth variant="outlined"
           placeholder="Add distribution name "

@@ -21,3 +21,12 @@ export const createDistro = (distro) => async (dispatch) => {
   }
 };
 
+export const updateDistro = (id, distro) => async (dispatch) => {
+  try {
+    const {data} = await api.updateDistro(id, distro);
+
+    dispatch({type: 'UPDATE', payload: data});
+  } catch (error) {
+    console.log(error);
+  }
+};
