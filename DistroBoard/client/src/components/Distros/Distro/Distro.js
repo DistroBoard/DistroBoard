@@ -6,8 +6,15 @@ import {deleteDistro, likeDistro} from '../../../actions/distros'
 
 import {Card, CardActions, CardContent, CardMedia, IconButton, Typography, Avatar, Tooltip} from '@material-ui/core/';
 
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import PopupState, {bindTrigger, bindMenu} from 'material-ui-popup-state';
+
+
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import DeleteIcon from '@material-ui/icons/Delete';
+import FeedbackIcon from '@material-ui/icons/Feedback';
+import EditIcon from '@material-ui/icons/Edit';
 import LanguageIcon from '@material-ui/icons/Language';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
@@ -29,9 +36,21 @@ const Distro = ({distro, setCurrentId}) => {
         </div>
 
         <div className={classes.overlay2}>
-          <Tooltip title="Edit info" aria-label="edit"><IconButton size="small"><MoreHorizIcon fontSize="default"
-            onClick={() => setCurrentId(distro._id)} />
-          </IconButton></Tooltip>
+
+          <PopupState variant="popover" popupId="distro-admins-menu">
+            {(popupState) => (
+              <>
+                <IconButton size="small" {...bindTrigger(popupState)}>
+                  <MoreHorizIcon fontSize="default" />
+                </IconButton>
+                <Menu {...bindMenu(popupState)}>
+                  <MenuItem onClick={() => {popupState.close(); setCurrentId(distro._id)}}><EditIcon className={classes.menuicons} fontSize="small" /> Edit</MenuItem>
+                  <MenuItem onClick={() => {popupState.close(); dispatch(deleteDistro(distro._id))}}> <DeleteIcon className={classes.menuicons} fontSize="small" /> Remove</MenuItem>
+                </Menu>
+              </>
+            )}
+          </PopupState>
+
         </div>
 
         <div className={classes.details}>
@@ -54,7 +73,7 @@ const Distro = ({distro, setCurrentId}) => {
         <CardActions className={classes.cardActions}>
           <Tooltip title="Like this distro" aria-label="like"><IconButton size="small" style={{color: "#f73378"}} onClick={() => dispatch(likeDistro(distro._id))}  > <FavoriteIcon fontSize="small" /> {distro.likeCount} </IconButton></Tooltip>
           <Tooltip title="Visit site" aria-label="visit"><IconButton size="small" style={{color: "#f73378"}} href={`${distro.distroUrl} `} target="_blank" > <LanguageIcon fontSize="small" /> </IconButton></Tooltip>
-          <Tooltip title="Delete this distro" aria-label="delete"><IconButton size="small" style={{color: "#f73378"}} onClick={() => dispatch(deleteDistro(distro._id))} > <DeleteIcon fontSize="small" /> </IconButton></Tooltip>
+          <Tooltip title="Suggest change" aria-label="change"><IconButton size="small" style={{color: "#f73378"}}> <FeedbackIcon fontSize="small" /> </IconButton></Tooltip>
         </CardActions>
 
       </Card>

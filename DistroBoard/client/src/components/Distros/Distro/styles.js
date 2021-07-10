@@ -21,6 +21,9 @@ export default makeStyles({
   icons: {
     paddingTop: '5px',
   },
+  menuicons: {
+    paddingRight: '5px',
+  },
   card: {
     display: 'flex',
     flexDirection: 'column',
