@@ -217,6 +217,7 @@ const Form = ({currentId, setCurrentId}) => {
             <MenuItem value="Iraq">Iraq</MenuItem>
             <MenuItem value="Ireland">Ireland</MenuItem>
             <MenuItem value="Israel">Israel</MenuItem>
+            <MenuItem value="Isle of Man">Isle of Man</MenuItem>
             <MenuItem value="Italy">Italy</MenuItem>
             <MenuItem value="Jamaica">Jamaica</MenuItem>
             <MenuItem value="Japan">Japan</MenuItem>
