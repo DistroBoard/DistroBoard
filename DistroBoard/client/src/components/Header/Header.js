@@ -2,7 +2,7 @@ import React from 'react';
 import {AppBar, Toolbar, Typography, IconButton, Tooltip, Avatar} from '@material-ui/core';
 
 import Search from "../Search/Search";
-import logo from "../../assets/images/logo.svg";
+import logo from "../../assets/images/logo.png";
 import useStyles from './styles';
 
 import GitHubIcon from '@material-ui/icons/GitHub';
