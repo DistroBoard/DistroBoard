@@ -71,7 +71,7 @@ const Distro = ({distro, setCurrentId}) => {
         */}
 
         <CardActions className={classes.cardActions}>
-          <Tooltip title="Like this distro" aria-label="like"><IconButton size="small" style={{color: "#f73378"}} onClick={() => dispatch(likeDistro(distro._id))}  > <FavoriteIcon fontSize="small" /> {distro.likeCount} </IconButton></Tooltip>
+          <Tooltip title="Like this distro" aria-label="like"><IconButton size="small" style={{color: "#f73378"}} onClick={() => dispatch(likeDistro(distro._id))}  > <FavoriteIcon fontSize="small" /> &nbsp; {distro.likeCount} </IconButton></Tooltip>
           <Tooltip title="Visit site" aria-label="visit"><IconButton size="small" style={{color: "#f73378"}} href={`${distro.distroUrl} `} target="_blank" > <LanguageIcon fontSize="small" /> </IconButton></Tooltip>
           <Tooltip title="Suggest change" aria-label="change"><IconButton size="small" style={{color: "#f73378"}}> <FeedbackIcon fontSize="small" /> </IconButton></Tooltip>
         </CardActions>
