@@ -100,6 +100,8 @@ const Form = ({currentId, setCurrentId}) => {
           <Select defaultValue="" onChange={(e) => setDistroData({...distroData, distroRelease: e.target.value})}>
             <MenuItem value="Stable">Stable</MenuItem>
             <MenuItem value="Rolling">Rolling</MenuItem>
+            <MenuItem value="Semi-Rolling">Semi-Rolling</MenuItem>
+            <MenuItem value="Semi-Stable">Semi-Stable</MenuItem>
           </Select>
         </FormControl>
 
