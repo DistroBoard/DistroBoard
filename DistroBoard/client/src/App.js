@@ -6,7 +6,6 @@ import {getDistros} from './actions/distros';
 
 import Header from './components/Header/Header';
 import Distros from './components/Distros/Distros';
-import Form from './components/Form/Form';
 
 const App = () => {
 
@@ -24,11 +23,8 @@ const App = () => {
         <Grow in>
           <Container>
             <Grid container justify="space-between" alignItems="stretch" spacing={3}>
-              <Grid item xs={12} sm={7}>
+              <Grid item xs={12} sm={12} md={12}>
                 <Distros setCurrentId={setCurrentId} />
-              </Grid>
-              <Grid item xs={12} sm={4}>
-                <Form currentId={currentId} setCurrentId={setCurrentId} />
               </Grid>
             </Grid>
           </Container>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import useStyles from './styles';
 import {useDispatch} from 'react-redux';
 
@@ -9,6 +9,8 @@ import {Card, CardActions, CardContent, CardMedia, IconButton, Typography, Avata
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import PopupState, {bindTrigger, bindMenu} from 'material-ui-popup-state';
+
+import Form from "../../Form/Form";
 
 
 import FavoriteIcon from '@material-ui/icons/Favorite';
@@ -25,6 +27,8 @@ import ExtensionIcon from '@material-ui/icons/Extension';
 const Distro = ({distro, setCurrentId}) => {
   const classes = useStyles();
   const dispatch = useDispatch();
+  const [openPopup, setOpenPopup] = useState(false);
+
   return (
     <>
       <Card className={classes.card}>
@@ -44,7 +48,7 @@ const Distro = ({distro, setCurrentId}) => {
                   <MoreHorizIcon fontSize="default" />
                 </IconButton>
                 <Menu {...bindMenu(popupState)}>
-                  <MenuItem onClick={() => {popupState.close(); setCurrentId(distro._id)}}><EditIcon className={classes.menuicons} fontSize="small" /> Edit</MenuItem>
+                  <MenuItem onClick={() => { popupState.close(); setOpenPopup(true); setCurrentId(distro._id)}}><EditIcon className={classes.menuicons} fontSize="small" /> Edit</MenuItem>
                   <MenuItem onClick={() => {popupState.close(); dispatch(deleteDistro(distro._id))}}> <DeleteIcon className={classes.menuicons} fontSize="small" /> Remove</MenuItem>
                 </Menu>
               </>
@@ -77,6 +81,9 @@ const Distro = ({distro, setCurrentId}) => {
         </CardActions>
 
       </Card>
+
+      <Form openPopup={openPopup} setOpenPopup={setOpenPopup} setCurrentId={distro._id} currentId={distro._id} ></Form>
+
     </>
   );
 }
