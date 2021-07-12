@@ -12,7 +12,7 @@ const Distros = ({setCurrentId}) => {
     !distros.length ? <Typography variant="h6" style={{flexGrow: 1}}>Sorry we could not fetch anything. <br /> Please try again later.</Typography> : (
       <Grid className={classes.mainContainer} container alignItems="stretch" spacing={3}>
         {distros.map((distro) => (
-          <Grid key={distro._id} item xs={12} sm={6} >
+          <Grid key={distro._id} item xs={12} sm={6} md={3} >
             <Distro distro={distro} setCurrentId={setCurrentId} />
           </Grid>
         ))}
