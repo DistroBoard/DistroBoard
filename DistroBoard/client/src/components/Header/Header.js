@@ -15,7 +15,7 @@ const Header = () => {
   const [openPopup, setOpenPopup] = useState(false);
   return (
     <>
-      <AppBar style={{marginBottom: 30}} color="default" position="static" >
+      <AppBar style={{marginBottom: 30}} color="default" position="sticky" >
         <Toolbar>
           <Avatar alt="Logo" className={classes.logo} variant="square" src={logo} />
           <Typography variant="h6" style={{flexGrow: 1}}>DistroBoard</Typography>
