@@ -30,6 +30,10 @@ export default makeStyles({
     justifyContent: 'space-between',
     height: '100%',
     position: 'relative',
+    '&:hover': {
+      boxShadow: "-1px 10px 29px 0px rgba(0,0,0,0.7)",
+      width: "101%",
+    },
   },
   overlay: {
     position: 'absolute',
@@ -51,7 +55,6 @@ export default makeStyles({
     justifyContent: 'space-between',
     margin: '10px',
     marginBottom: '-5px',
-
   },
   title: {
     padding: '0 16px',

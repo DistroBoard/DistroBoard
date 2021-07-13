@@ -48,7 +48,7 @@ const Distro = ({distro, setCurrentId}) => {
                   <MoreHorizIcon fontSize="default" />
                 </IconButton>
                 <Menu {...bindMenu(popupState)}>
-                  <MenuItem onClick={() => { popupState.close(); setOpenPopup(true); setCurrentId(distro._id)}}><EditIcon className={classes.menuicons} fontSize="small" /> Edit</MenuItem>
+                  <MenuItem onClick={() => {popupState.close(); setOpenPopup(true); setCurrentId(distro._id)}}><EditIcon className={classes.menuicons} fontSize="small" /> Edit</MenuItem>
                   <MenuItem onClick={() => {popupState.close(); dispatch(deleteDistro(distro._id))}}> <DeleteIcon className={classes.menuicons} fontSize="small" /> Remove</MenuItem>
                 </Menu>
               </>
@@ -83,6 +83,45 @@ const Distro = ({distro, setCurrentId}) => {
       </Card>
 
       <Form openPopup={openPopup} setOpenPopup={setOpenPopup} setCurrentId={distro._id} currentId={distro._id} ></Form>
+
+    </>
+  );
+}
+
+export default Distro;
+                </Menu >
+              </>
+            )}
+          </PopupState >
+
+        </div >
+
+        <div className={classes.details}>
+          <Avatar aria-label="logo" variant="square" className={classes.logo} src={distro.distroLogo} />
+        </div>
+
+        <CardContent>
+          <Typography variant="body2" color="textPrimary" component="h2"><Tooltip title="Development" aria-label="status"><InfoIcon className={classes.icons} fontSize="small" style={{color: "#f48fb1"}} /></Tooltip> {distro.distroStatus}</Typography>
+          <Typography variant="body2" color="textPrimary" component="h2"><Tooltip title="Based on" aria-label="base"><ExtensionIcon className={classes.icons} fontSize="small" style={{color: "#f48fb1"}} /></Tooltip> {distro.distroBase}</Typography>
+          <Typography variant="body2" color="textPrimary" component="h2"><Tooltip title="Release type" aria-label="release"><NewReleasesIcon className={classes.icons} fontSize="small" style={{color: "#f48fb1"}} /></Tooltip> {distro.distroRelease}</Typography>
+          <Typography variant="body2" color="textPrimary" component="h2"><Tooltip title="Origin" aria-label="origin"><LocationOnIcon className={classes.icons} fontSize="small" style={{color: "#f48fb1"}} /></Tooltip>  {distro.distroOrigin}</Typography>
+        </CardContent>
+
+{/*        
+        <div className={classes.details}>
+          <Typography variant="body2" color="textSecondary" component="h2">{distro.tags.map((tag) => `#${tag} `)}</Typography>
+        </div>
+        */}
+
+<CardActions className={classes.cardActions}>
+  <Tooltip title="Like this distro" aria-label="like"><IconButton size="small" style={{color: "#f73378"}} onClick={() => dispatch(likeDistro(distro._id))}  > <FavoriteIcon fontSize="small" /> &nbsp; {distro.likeCount} </IconButton></Tooltip>
+  <Tooltip title="Visit site" aria-label="visit"><IconButton size="small" style={{color: "#f73378"}} href={`${distro.distroUrl} `} target="_blank" > <LanguageIcon fontSize="small" /> </IconButton></Tooltip>
+  <Tooltip title="Suggest change" aria-label="change"><IconButton size="small" style={{color: "#f73378"}}> <FeedbackIcon fontSize="small" /> </IconButton></Tooltip>
+</CardActions>
+
+      </Card >
+
+  <Form openPopup={openPopup} setOpenPopup={setOpenPopup} setCurrentId={distro._id} currentId={distro._id} ></Form>
 
     </>
   );
