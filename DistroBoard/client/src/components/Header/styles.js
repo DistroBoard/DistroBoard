@@ -11,5 +11,22 @@ export default makeStyles((theme) => ({
     height: theme.spacing(4),
     marginRight: 13,
   },
+  menuIcons: {
+    paddingRight: '5px',
+  },
+  responsive: {
+    display: 'none',
+    [theme.breakpoints.up("sm")]: {
+      display: 'flex',
+    },
+  },
+  responsiveMenu: {
+    position: 'absolute',
+    right: '1px',
+    display: 'flex',
+    [theme.breakpoints.up("sm")]: {
+      display: 'none',
+    },
+  },
 
 }));
