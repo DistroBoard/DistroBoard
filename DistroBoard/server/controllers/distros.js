@@ -7,7 +7,15 @@ import DistroInfo from '../models/distroInfo.js';
 export const getDistros = async (req, res) => {
   try {
     //if everything is fine then display the available distros
-    const distroInfos = await DistroInfo.find();
+    // return normally
+    //const distroInfos = await DistroInfo.find();
+
+    // sort alphabetically and return
+    const distroInfos = await DistroInfo.find().sort({distroName: 1});
+
+    //return 1 random distro
+    //const distroInfos = await DistroInfo.aggregate([{$sample: {size: 1}}]);
+
     res.status(200).json(distroInfos);
   } catch (error) {
     // if theres an error return a message
