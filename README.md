@@ -112,8 +112,14 @@ client/
 │   │   │   ├── Header.js
 │   │   │   └── styles.js
 │   │   └── Search ( the search bar used to search distros)
-│   │       ├── Search.js
-│   │       └── styles.js
+│   │   |    ├── Search.js
+│   │   |    └── styles.js
+│   │   └── AllDistros (displays all distros in alphabetical order used by react-router)
+│   │   |    ├── AllDistros.js 
+│   │   └── About (about page used by react-router)
+│   │   |    ├── About.js
+│   │   └── Auth (auth page used by react-router)
+│   │       ├── Auth.js
 |   |
 │   ├── index.js (the startpoint of the frontend)
 ├── package.json (a detailed list of all packages used in the backend)
