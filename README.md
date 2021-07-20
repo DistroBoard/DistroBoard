@@ -118,6 +118,7 @@ client/
 │   │   |    ├── AllDistros.js 
 │   │   └── About (about page used by react-router)
 │   │   |    ├── About.js
+│   │   |    └── styles.js
 │   │   └── Auth (auth page used by react-router)
 │   │       ├── Auth.js
 |   |
