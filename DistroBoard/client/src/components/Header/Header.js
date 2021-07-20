@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {AppBar, Toolbar, Typography, IconButton, Tooltip, Avatar, Menu, MenuItem} from '@material-ui/core';
+import {AppBar, Toolbar, Typography, Button, IconButton, Tooltip, Avatar, Menu, MenuItem} from '@material-ui/core';
 import {Link} from 'react-router-dom';
 
 import PopupState, {bindTrigger, bindMenu} from 'material-ui-popup-state';
@@ -28,11 +28,12 @@ const Header = () => {
 
           <Search />
 
-          <div className={classes.responsive}  >
+          <div className={classes.responsive}>
+
             <Tooltip title="Add Distro" aria-label="add distro"><IconButton color="inherit" onClick={() => setOpenPopup(true)}><AddCircleIcon /></IconButton></Tooltip>
-            <Tooltip title="Login/Signup" aria-label="login/signup"><IconButton component={Link} to="/auth" color="inherit"><AccountCircleIcon /></IconButton></Tooltip>
             <Tooltip title="About Us" aria-label="about"><IconButton color="inherit" component={Link} to="/about"><InfoIcon /></IconButton></Tooltip>
             <Tooltip title="View Source" aria-label="source"><IconButton color="inherit" href="https://github.com/DistroBoard/DistroBoard" target="_blank"><GitHubIcon /></IconButton></Tooltip>
+            <Tooltip title="Login/Signup" aria-label="login/signup"><Button component={Link} to="/auth" color="primary" variant="outlined" style={{margin: '5px', borderRadius: '3px'}} > Login</Button></Tooltip>
           </div>
 
           <PopupState variant="popover" popupId="responsive-menu" >
