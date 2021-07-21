@@ -6,7 +6,6 @@ A modern and opensource alternative to distrowatch
 ![ClosedIssues](https://img.shields.io/github/issues-closed-raw/Distroboard/Distroboard?style=for-the-badge&color=9cf&logo=fing)
 ![LastCommit](https://img.shields.io/github/last-commit/Distroboard/Distroboard?style=for-the-badge&color=informational&logo=fastly )
 ![Contributors](https://img.shields.io/github/contributors-anon/Distroboard/Distroboard?style=for-the-badge&color=9cf&logo=appveyor)
-![Stage](https://img.shields.io/static/v1?label=Stage&message=Pre-Alpha&style=for-the-badge&logo=chakraui&color=blue)
 
 
 
