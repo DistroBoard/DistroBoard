@@ -8,6 +8,10 @@ A modern and opensource alternative to distrowatch
 ![Contributors](https://img.shields.io/github/contributors-anon/Distroboard/Distroboard?style=for-the-badge&color=9cf&logo=appveyor)
 ![Stage](https://img.shields.io/static/v1?label=Stage&message=Pre-Alpha&style=for-the-badge&logo=chakraui&color=blue)
 ![License](https://img.shields.io/github/license/Distroboard/Distroboard?style=for-the-badge&color=9cf&logo=auth0)
+![Frontend](https://img.shields.io/static/v1?label=Frontend&message=React&style=for-the-badge&logo=react&color=informational)
+![Middleware](https://img.shields.io/static/v1?label=Middleware&message=Redux&style=for-the-badge&logo=redux&color=9cf)
+![Backend](https://img.shields.io/static/v1?label=Backend&message=Express&style=for-the-badge&logo=express&color=blue)
+
 
 ![Project Banner](./repo/screenshot1.png)
 
