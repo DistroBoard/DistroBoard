@@ -153,3 +153,6 @@ client/
 ![Middleware](https://img.shields.io/static/v1?label=Middleware&message=Redux&style=for-the-badge&logo=redux&color=9cf)
 
 ![Backend](https://img.shields.io/static/v1?label=Backend&message=Express&style=for-the-badge&logo=express&color=blue)
+
+![Database](https://img.shields.io/static/v1?label=Database&message=MongoDB&style=for-the-badge&logo=mongodb&color=9cf)
+
