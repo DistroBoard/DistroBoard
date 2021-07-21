@@ -3,6 +3,13 @@ A modern and opensource alternative to distrowatch
 
 ![Project Banner](./repo/screenshot1.png)
 
+
+![License](https://img.shields.io/github/license/Distroboard/Distroboard?style=for-the-badge&color=9cf)
+![OpenIssues](https://img.shields.io/github/issues-raw/Distroboard/Distroboard?style=for-the-badge&color=blue)
+![ClosedIssues](https://img.shields.io/github/issues-closed-raw/Distroboard/Distroboard?style=for-the-badge&color=9cf)
+![LastCommit](https://img.shields.io/github/last-commit/Distroboard/Distroboard?style=for-the-badge&color=informational)
+![Contributors](https://img.shields.io/github/contributors-anon/Distroboard/Distroboard?style=for-the-badge&color=9cf)
+
 # Notes for developers
 
 ## Instructions to run application in develpment
