@@ -12,8 +12,6 @@ A modern and opensource alternative to distrowatch
 ![Project Banner](./repo/screenshot1.png)
 
 
-
-
 # Notes for developers
 
 ## Instructions to run application in develpment
@@ -139,6 +137,12 @@ client/
 └── yarn.lock (lock file for packages)
 
 ```
+# Branch Structure
+* Main - The master branch used for hosting
+* Beta-Stable - Branch containing stable tested features yet to be added to main.
+* Beta-Unstable - Branch containing incomplete features yet to be tested and completed.
+* Nightly - All new features originate here. This is an experemental branch. 
+
 
 # Key Developers
 | Contributor                                         | Role              |
