@@ -2,11 +2,12 @@
 A modern and opensource alternative to distrowatch
 
 
-![License](https://img.shields.io/github/license/Distroboard/Distroboard?style=for-the-badge&color=9cf)
-![OpenIssues](https://img.shields.io/github/issues-raw/Distroboard/Distroboard?style=for-the-badge&color=blue)
-![ClosedIssues](https://img.shields.io/github/issues-closed-raw/Distroboard/Distroboard?style=for-the-badge&color=9cf)
-![LastCommit](https://img.shields.io/github/last-commit/Distroboard/Distroboard?style=for-the-badge&color=informational)
-![Contributors](https://img.shields.io/github/contributors-anon/Distroboard/Distroboard?style=for-the-badge&color=9cf)
+![OpenIssues](https://img.shields.io/github/issues-raw/Distroboard/Distroboard?style=for-the-badge&color=blue&logo=codacy)
+![ClosedIssues](https://img.shields.io/github/issues-closed-raw/Distroboard/Distroboard?style=for-the-badge&color=9cf&logo=fing)
+![LastCommit](https://img.shields.io/github/last-commit/Distroboard/Distroboard?style=for-the-badge&color=informational&logo=fastly )
+![Contributors](https://img.shields.io/github/contributors-anon/Distroboard/Distroboard?style=for-the-badge&color=9cf&logo=appveyor)
+![Stage](https://img.shields.io/static/v1?label=Stage&message=Pre-Alpha&style=for-the-badge&logo=chakraui&color=blue)
+
 ![Project Banner](./repo/screenshot1.png)
 
 
