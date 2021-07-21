@@ -1,6 +1,7 @@
 # DistroBoard
 A modern and opensource alternative to distrowatch
 
+![Project Banner](./repo/screenshot2.png)
 
 # Notes for developers
 
