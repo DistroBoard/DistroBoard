@@ -140,7 +140,7 @@ client/
 # Branch Structure
 * Main - The master branch used for hosting
 * Beta-Stable - Branch containing stable tested features yet to be added to main.
-* Beta-Unstable - Branch containing incomplete features yet to be tested and completed.
+* Beta-Unstable - Branch based on nightly containing incomplete features yet to be tested and completed.
 * Nightly - All new features originate here. This is an experemental branch. 
 
 
