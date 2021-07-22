@@ -130,9 +130,9 @@ client/
 │   │   |    ├── About.js
 │   │   |    └── styles.js
 │   │   └── Auth (auth page used by react-router)
-│   │       ├── Auth.js
-│   │       ├── Input.js
-│   │       └── styles.js
+│   │        ├── Auth.js
+│   │        ├── Input.js
+│   │        └── styles.js
 │   │ 
 │   ├── index.js (the startpoint of the frontend)
 ├── package.json (a detailed list of all packages used in the backend)
