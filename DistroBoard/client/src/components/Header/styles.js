@@ -28,5 +28,13 @@ export default makeStyles((theme) => ({
       display: 'none',
     },
   },
-
+  title: {
+    marginRight: "auto",
+  },
+  drawer: {
+    width: '250px',
+  },
+  content: {
+    padding: theme.spacing(3),
+  },
 }));
