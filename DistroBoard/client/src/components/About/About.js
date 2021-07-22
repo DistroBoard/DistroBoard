@@ -29,7 +29,7 @@ const About = () => {
 
               <Typography variant="h4">About Us</Typography>
               <Typography className={classes.about} variant="body1">
-                Linux refers to the family of opensource operating systems based on the linux kernel. It is the leading operating system on servers worldwide and is slowly increasing its share in the desktop share too.
+                Linux refers to the family of opensource operating systems based on the linux kernel. It is the leading operating system on servers worldwide and is slowly increasing its share in the desktop space too.
                 It's flexibility allows several developers to make their own operating systems based on the kernel. Each day the no of linux distributions (distros) increase, this makes
                 linux more and more fragmented. Here at DistroBoard we aim to provide information regarding
                 all these distros in a centralized consistent & simplified manner for both new and experienced users hoping to reduce the fragementation.
@@ -37,7 +37,7 @@ const About = () => {
               </Typography>
 
               <Typography className={classes.about} variant="body1">
-                Linux is not just limited to operating systems, it is the core of a vast FOSS loving enthusiasts.
+                Linux is not just limited to operating systems, it is the core of a vast FOSS loving enthusiast community.
                 <br />
                 We are a small team of developers in this huge community expressing our love for linux in a manner where we make information about linux more easily accessable.
                 Hope what you find in here helps you  :)
