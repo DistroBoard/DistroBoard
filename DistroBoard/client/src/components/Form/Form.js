@@ -52,7 +52,7 @@ const Form = ({currentId, setCurrentId, openPopup, setOpenPopup}) => {
 
 
     <>
-      <Dialog open={openPopup}>
+      <Dialog open={openPopup} style={{marginTop: '45px'}}>
 
         <DialogTitle >
           <div style={{display: 'flex'}}>
