@@ -10,6 +10,7 @@ A modern and opensource alternative to distrowatch
 
 
 ![Project Banner](./repo/screenshot1.png)
+![Project Banner 2](./repo/screenshot2.png)
 
 
 # Notes for developers
