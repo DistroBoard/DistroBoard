@@ -29,6 +29,7 @@ export default makeStyles({
     flexDirection: 'column',
     justifyContent: 'space-between',
     height: '100%',
+    borderRadius: 0,
     position: 'relative',
     '&:hover': {
       boxShadow: "-1px 10px 29px 0px rgba(0,0,0,0.7)",
