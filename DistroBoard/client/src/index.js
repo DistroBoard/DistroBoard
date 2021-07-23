@@ -15,6 +15,7 @@ import App from './App';
 const store = createStore(reducers, compose(applyMiddleware(thunk)));
 
 const theme = createMuiTheme({
+  //Pallet
   palette: {
     type: "dark",
     primary: {
@@ -24,8 +25,34 @@ const theme = createMuiTheme({
     secondary: {
       main: '#f48fb1',
     },
+  },
+  //Scrollbar
+  overrides: {
+    MuiCssBaseline: {
+      '@global': {
+        '*': {
+          'scrollbar-width': 'thin',
+        },
+        '*::-webkit-scrollbar': {
+          width: '4px',
+          height: '4px',
+          background: '#0000008c',
+
+        },
+        '*::-webkit-scrollbar-thumb': {
+          background: '#f48fb1',
+          borderRadius: '30px',
+        },
+
+      }
+    }
   }
+
+
 });
+
+
+
 
 ReactDOM.render(
   <Provider store={store}>
