@@ -11,6 +11,10 @@ export default makeStyles((theme) => ({
     height: theme.spacing(4),
     marginRight: 13,
   },
+  appBar: {
+    /*tooltip has highest z index of 1500 so to make sure that everytime z index for app bar is the highest make it higher than tooltip*/
+    zIndex: 1600,
+  },
   menuIcons: {
     paddingRight: '5px',
   },

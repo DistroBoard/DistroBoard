@@ -28,16 +28,15 @@ const Header = () => {
   const classes = useStyles();
   const [openDrawer, setOpenDrawer] = useState(false);
   const [openPopup, setOpenPopup] = useState(false);
-
   return (
     <>
-      <AppBar style={{marginBottom: 30}} color="default" position="sticky" >
+      <AppBar style={{marginBottom: 30}} color="default" position="sticky" className={classes.appBar}>
         <Toolbar>
 
           <IconButton
             color="inherit"
             edge="start"
-            onClick={() => setOpenDrawer(true)}
+            onClick={() => setOpenDrawer(!openDrawer)}
           >
             <MenuIcon />
           </IconButton>
@@ -62,7 +61,7 @@ const Header = () => {
 
       <Drawer open={openDrawer} onClose={() => setOpenDrawer(false)}>
         <List disablePadding className={classes.drawer}>
-
+          <Toolbar />
           <ListSubheader component="div" id="explore" disableSticky={true} >
             Explore
           </ListSubheader>
