@@ -1,10 +1,12 @@
-import {FETCH_ALL, CREATE, UPDATE, DELETE, LIKE} from '../constants/actions'
+import {FETCH_ALL, FETCH_RANDOM, CREATE, UPDATE, DELETE, LIKE} from '../constants/actions'
 
 const distroReducer = (distros = [], action) => {
 
   switch (action.type) {
 
     case FETCH_ALL:
+      return action.payload;
+    case FETCH_RANDOM:
       return action.payload;
     case CREATE:
       return [...distros, action.payload];

@@ -1,10 +1,21 @@
-import {FETCH_ALL, CREATE, UPDATE, DELETE, LIKE} from '../constants/actions'
+import {FETCH_ALL, FETCH_RANDOM, CREATE, UPDATE, DELETE, LIKE} from '../constants/actions'
 import * as api from '../api';
 
 export const getDistros = () => async (dispatch) => {
   try {
     const {data} = await api.fetchDistros();
     dispatch({type: FETCH_ALL, payload: data});
+
+  } catch (error) {
+    console.log(error.msg);
+  }
+
+};
+
+export const getRandom = () => async (dispatch) => {
+  try {
+    const {data} = await api.fetchRandom();
+    dispatch({type: FETCH_RANDOM, payload: data});
 
   } catch (error) {
     console.log(error.msg);
