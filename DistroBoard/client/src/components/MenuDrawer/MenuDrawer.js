@@ -1,6 +1,6 @@
 import React from 'react';
 import {Drawer, List, ListItem, ListItemText, ListItemIcon, ListSubheader, Divider, Toolbar} from '@material-ui/core';
-
+import {Link} from 'react-router-dom';
 import useStyles from './styles';
 
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -28,7 +28,7 @@ const MenuDrawer = ({openDrawer, setOpenDrawer}) => {
             Explore
           </ListSubheader>
 
-          <ListItem button onClick={() => setOpenDrawer(false)} >
+          <ListItem component={Link} to="/" button onClick={() => setOpenDrawer(false)} >
             <ListItemIcon><HomeIcon /></ListItemIcon>
             <ListItemText primary="Home" />
           </ListItem>
@@ -36,7 +36,7 @@ const MenuDrawer = ({openDrawer, setOpenDrawer}) => {
             <ListItemIcon><WhatshotIcon /></ListItemIcon>
             <ListItemText primary="Trending" />
           </ListItem>
-          <ListItem button onClick={() => setOpenDrawer(false)} >
+          <ListItem component={Link} to="/random"  button onClick={() => setOpenDrawer(false)} >
             <ListItemIcon><ShuffleIcon /></ListItemIcon>
             <ListItemText primary="Random" />
           </ListItem>
@@ -54,7 +54,7 @@ const MenuDrawer = ({openDrawer, setOpenDrawer}) => {
             Account
           </ListSubheader>
 
-          <ListItem button onClick={() => setOpenDrawer(false)} >
+          <ListItem component={Link} to="/auth"  button onClick={() => setOpenDrawer(false)} >
             <ListItemIcon><ExitToAppIcon /></ListItemIcon>
             <ListItemText primary="Login" />
           </ListItem>
