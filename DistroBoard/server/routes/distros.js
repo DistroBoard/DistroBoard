@@ -2,11 +2,12 @@
 import express from 'express';
 
 // get handlers for our route
-import {getDistros, createDistro, updateDistro, deleteDistro, likeDistro} from '../controllers/distros.js';
+import {getDistros, getRandom, createDistro, updateDistro, deleteDistro, likeDistro} from '../controllers/distros.js';
 
 const router = express.Router();
 
 router.get('/', getDistros);
+router.get('/random', getRandom);
 router.post('/', createDistro);
 router.patch('/:id', updateDistro);
 router.delete('/:id', deleteDistro);

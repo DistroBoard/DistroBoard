@@ -23,6 +23,20 @@ export const getDistros = async (req, res) => {
   }
 };
 
+export const getRandom = async (req, res) => {
+  try {
+    //if everything is fine then display the available distros
+
+    //return 1 random distro
+    const distroInfos = await DistroInfo.aggregate([{$sample: {size: 4}}]);
+
+    res.status(200).json(distroInfos);
+  } catch (error) {
+    // if theres an error return a message
+    res.status(404).json({message: error.message});
+  }
+};
+
 export const createDistro = async (req, res) => {
   //fetch information about distro from frontend
   const distro = req.body;
