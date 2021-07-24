@@ -1,13 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 import useStyles from './styles';
 import {useDispatch} from 'react-redux';
 
 import {likeDistro} from '../../../../actions/distros'
 
 import {Card, CardActions, CardContent, CardMedia, IconButton, Typography, Avatar, Tooltip} from '@material-ui/core/';
-
-
-
 
 
 import FavoriteIcon from '@material-ui/icons/Favorite';

@@ -1,7 +1,5 @@
-
 import React, {useState, useEffect} from 'react';
-import {Grow, Grid, Container, Button, Typography, Breadcrumbs} from '@material-ui/core';
-import {Link} from 'react-router-dom';
+import {Grow, Grid, Container, Button} from '@material-ui/core';
 import RandomDistros from './RandomDistros/RandomDistros';
 
 import useStyles from './styles';
