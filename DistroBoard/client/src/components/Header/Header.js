@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import {AppBar, Toolbar, Typography, Button, IconButton, Tooltip, Avatar} from '@material-ui/core';
-import {Link} from 'react-router-dom';
+import {AppBar, Toolbar, Typography, Button, IconButton, Tooltip, Avatar, Divider} from '@material-ui/core';
+import {withRouter, matchPath, Link} from 'react-router-dom';
 
 
 import Search from "../Search/Search";
@@ -21,6 +21,18 @@ const Header = () => {
   const classes = useStyles();
   const [openDrawer, setOpenDrawer] = useState(false);
   const [openPopup, setOpenPopup] = useState(false);
+
+  const routes = [
+    {key: 'Home', exact: true, path: '/'},
+    {key: 'About', exact: true, path: '/about'},
+    {key: 'Login', exact: true, path: '/auth'},
+    {key: 'Random', exact: true, path: '/random'},
+  ];
+
+  const currentRoute = routes.find(
+    route => matchPath(window.location.pathname, route)
+  );
+
   return (
     <>
       <AppBar style={{marginBottom: 30}} color="default" position="sticky" className={classes.appBar}>
@@ -35,8 +47,11 @@ const Header = () => {
           </IconButton>
 
           <Avatar alt="Logo" component={Link} to="/" className={classes.logo} variant="square" src={logo} />
-          <Typography variant="h6" component={Link} to="/" className={classes.responsive} style={{flexGrow: 1, textDecoration: 'none', color: 'inherit'}}>DistroBoard</Typography>
-
+          <Typography variant="h6" component={Link} to="/" className={classes.responsive} style={{textDecoration: 'none', color: 'inherit'}}>DistroBoard</Typography>
+          <Divider orientation="vertical" variant="middle" flexItem style={{color: 'inherit', marginTop: '10px', marginBottom: '10px'}} className={classes.responsive} />
+          <Typography variant="body1" className={classes.responsive} style={{flexGrow: 1, textDecoration: 'none', color: 'inherit', marginTop: '2px'}}>
+            {currentRoute.key}
+          </Typography>
           <Search />
 
           <div className={classes.responsive}>
@@ -56,4 +71,4 @@ const Header = () => {
   );
 }
 
-export default Header;
+export default withRouter(Header);
