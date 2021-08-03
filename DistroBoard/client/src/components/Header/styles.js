@@ -41,4 +41,8 @@ export default makeStyles((theme) => ({
   content: {
     padding: theme.spacing(3),
   },
+  profile: {
+    display: 'flex',
+    justifyContent: 'space-around',
+  },
 }));
