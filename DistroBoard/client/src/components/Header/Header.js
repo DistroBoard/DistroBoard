@@ -24,7 +24,7 @@ const Header = () => {
   const classes = useStyles();
   const [openDrawer, setOpenDrawer] = useState(false);
   const [openPopup, setOpenPopup] = useState(false);
-  const user = 1; //null
+  const user = null; //null
 
   const routes = [
     {key: 'Home', exact: true, path: '/'},
@@ -97,7 +97,7 @@ const Header = () => {
                 </div>
 
             ): (
-            <Tooltip title="Login/Signup" aria-label="login/signup"><Button className={classes.responsive} component={Link} to="/auth" color="secondary" variant="outlined" style={{margin: '5px', borderRadius: '3px'}} > Login</Button></Tooltip>
+            <Tooltip title="Login as Admin" aria-label="login/signup"><Button className={classes.responsive} component={Link} to="/auth" color="secondary" variant="outlined" style={{margin: '5px', borderRadius: '3px'}} >Admin</Button></Tooltip>
             )}
           </div>
 

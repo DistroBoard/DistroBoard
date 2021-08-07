@@ -15,6 +15,7 @@ import VpnKeyIcon from '@material-ui/icons/VpnKey';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import MessageIcon from '@material-ui/icons/Message';
 import EmailIcon from '@material-ui/icons/Email';
+import BugReportIcon from '@material-ui/icons/BugReport';
 
 const MenuDrawer = ({openDrawer, setOpenDrawer}) => {
 
@@ -50,8 +51,8 @@ const MenuDrawer = ({openDrawer, setOpenDrawer}) => {
           </ListItem>
           <Divider />
 
-          <ListSubheader component="div" id="account" disableSticky={true}>
-            Account
+          <ListSubheader component="div" id="admins" disableSticky={true}>
+            Admins
           </ListSubheader>
 
           <ListItem component={Link} to="/auth"  button onClick={() => setOpenDrawer(false)} >
@@ -59,8 +60,8 @@ const MenuDrawer = ({openDrawer, setOpenDrawer}) => {
             <ListItemText primary="Login" />
           </ListItem>
           <ListItem button onClick={() => setOpenDrawer(false)} >
-            <ListItemIcon><VpnKeyIcon /></ListItemIcon>
-            <ListItemText primary="Super User" />
+            <ListItemIcon><BugReportIcon /></ListItemIcon>
+            <ListItemText primary="Issues" />
           </ListItem>
 
 
