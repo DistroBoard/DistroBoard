@@ -11,7 +11,6 @@ import WhatshotIcon from '@material-ui/icons/Whatshot';
 import ShuffleIcon from '@material-ui/icons/Shuffle';
 import SearchIcon from '@material-ui/icons/Search';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
-import VpnKeyIcon from '@material-ui/icons/VpnKey';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import MessageIcon from '@material-ui/icons/Message';
 import EmailIcon from '@material-ui/icons/Email';
