@@ -2,15 +2,13 @@
 A modern and opensource alternative to distrowatch
 
 
-![OpenIssues](https://img.shields.io/github/issues-raw/Distroboard/Distroboard?style=for-the-badge&color=blue&logo=codacy)
+![OpenIssues](https://img.shields.io/github/issues-raw/Distroboard/Distroboard?style=for-the-badge&color=9cf&logo=codacy)
 ![ClosedIssues](https://img.shields.io/github/issues-closed-raw/Distroboard/Distroboard?style=for-the-badge&color=9cf&logo=fing)
 ![LastCommit](https://img.shields.io/github/last-commit/Distroboard/Distroboard?style=for-the-badge&color=informational&logo=fastly )
 ![Contributors](https://img.shields.io/github/contributors-anon/Distroboard/Distroboard?style=for-the-badge&color=9cf&logo=appveyor)
 
 
-
 ![Project Banner](./repo/screenshot1.png)
-
 
 # Notes for developers
 
@@ -143,20 +141,19 @@ client/
 * Beta-Unstable - Branch based on nightly containing incomplete features yet to be tested and completed.
 * Nightly - All new features originate here. This is an experemental branch. 
 
-
-# Key Developers
-| Contributor                                         | Role              |
-|-----------------------------------------------------|-------------------|
-| [VULKAN](https://github.com/CTZxVULKAN)             | FullStack Web Dev |
-| [Abdellatif-dev](https://github.com/abdellatif-dev) | Server Guy        |
-| [NarutoXY](https://github.com/NarutoXY)             | FrontEnd Web Dev  |
-
 # Stack
-![Frontend](https://img.shields.io/static/v1?label=Frontend&message=React&style=for-the-badge&logo=react&color=informational)
 
-![Middleware](https://img.shields.io/static/v1?label=Middleware&message=Redux&style=for-the-badge&logo=redux&color=9cf)
+![Frontend](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 
-![Backend](https://img.shields.io/static/v1?label=Backend&message=Express&style=for-the-badge&logo=express&color=blue)
+![UI Framework](https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)
+<!--![UI Framework](https://img.shields.io/badge/Chakra--UI-319795?style=for-the-badge&logo=chakra-ui&logoColor=white)-->
 
-![Database](https://img.shields.io/static/v1?label=Database&message=MongoDB&style=for-the-badge&logo=mongodb&color=9cf)
+![Middleware](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)
+
+![Backend](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+
+![Databse](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+
+# Contributors
+![GitHub Contributors Image](https://contrib.rocks/image?repo=Distroboard/Distroboard)
 
