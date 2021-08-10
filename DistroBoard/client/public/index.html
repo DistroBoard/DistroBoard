@@ -26,18 +26,78 @@
 </head>
 
 <body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <noscript>
+    <!--Internal CSS is used to remove any conflicts between the CSS defined in React App and the `noscipt` page-->
+    <style>
+      :root {
+        --background: hsl(26, 18%, 92%);
+        --text-color: hsl(0, 0%, 27%);
+        --hero-color: hsl(0, 0%, 9%);
+        --gradient-1: hsl(331, 100%, 64%);
+        --gradient-2: hsl(359, 100%, 69%);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: 'JetBrains Mono', sans-serif;
+        background-color: var(--background);
+      }
+      .row {
+        justify-content: space-around;
+        align-items: center;
+        margin: 5em 0;
+        display: flex;
+      }
+
+      .r1 {
+        flex-basis: 40%;
+        position: relative;
+        margin-left: 3em;
+      }
+
+      .r1 h2 {
+        font-size: 2em;
+        color: var(--hero-color);
+      }
+
+
+
+      .r1 h3 {
+        font-size: 1em;
+        color: var(--text-color);
+        font-weight: 100;
+      }
+
+
+      .r1::after {
+        content: "";
+        width: 1em;
+        height: 57%;
+        background: linear-gradient(to right, var(--gradient-1), var(--gradient-2));
+        position: absolute;
+        left: -3rem;
+        top: 1rem;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+        --background: hsl(226, 29%, 18%);
+        --text-color: hsl(216, 41%, 79%);
+        --hero-color: hsl(176, 57%, 89%);
+        --gradient-1: hsl(205, 84%, 36%);
+        --gradient-2: hsl(212, 93%, 49%);
+        }
+      }
+
+    </style>
+    <div class="row">
+      <div class="r1">
+        <h2>Welcome to DistroBoard!</h2>
+        <h3>It looks like you have disabled JavaScript on your browser. Unfortunately DistroBoard is a React Application, so it requires JavaScript to run. Please Enable JavaScript in your browser and refresh the page to be part of this awesome community centred around Linux and GNU/Linux Distributions.</h3>
+      </div>
+    </div>
+  </noscript>
   <div id="root"></div>
-  <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
 </body>
 
 </html>
